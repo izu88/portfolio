@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZUMI KITAMURA Works -IZUMI KITAMURA-</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="IZUMI KITAMURA portfolio"></a></h1>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="nav_sp">
+            <!-- 表示・非表示 -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- アイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <h1>IZUMI KITAMURA</h1>
+                <ul class="nav_list">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                    <li><a href="mailto:izumikitamura.88@gmail.com">
+                        Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Javascriptハンバーガー閉じる -->
+            <script>
+                // ハンバーガーメニューを開閉する<input id="nav-input" type="checkbox" class="nav-unshown">を取得（ここがcheckedになるとハンバーガーメニューが開く）
+                const navInput = document.getElementById('drawer_input')
+
+                // ハンバーガーメニューの中、リンクタグを全部取得
+                const hamburger = document.querySelectorAll('.nav_list li a')
+
+                // 返り値は Array ではなく NodeListなので、配列にする（多分しなくてもいいforEach() メソッドを使うので）
+                const hamburgerA = Array.from(hamburger)
+
+                // forEachで回す
+                hamburgerA.forEach(function (element) {
+                    // ハンバーガーメニュー内のリンクタグをクリックしたら
+                    element.addEventListener('click', function () {
+                        // ハンバーガーメニューのcheckedを外す
+                        navInput.checked = false
+                    })
+                })
+            </script>
+            <!-- javascript終わり -->
+        </div>
+
+        <!-- ハンバーガー終わり -->
+
+        <nav class="nav_pc">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                <li><a href="mailto:izumikitamura.88@gmail.com">
+                    Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- works -->
+        <section id="worksP1" class="wrapperPW">
+            <h2 class="sec-title">Works</h2>
+            <div class="content">
+                <img src="img/worksP3.jpg" class="img_pc" alt="IZUMI KITAMURA画像">
+                <img src="img/worksP3_SP.jpg" class="img_sp" alt="IZUMI KITAMURAスマホ画像">
+            </div>
+
+            <!-- article -->
+            <div id="article">
+                <div class="works-logo">
+                    <ul>
+                        <li>
+                            <a href="index.html" target="_blank" rel="noopener">
+                                <img src="img/worksP3_logo.jpg" id="works_logo1" alt="M&Mロゴ">
+                                <p>WEB site</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="article_text">
+                    <ul>
+                        <li>
+                            <h4 class="content-sub">3.自身のプロフィールサイト</h3><br>
+                                <p>使用ツール : <br class="br_sp">Figma / VSCode</p>
+                                <p>使用言語 : <br class="br_sp">HTML / CSS / Javascript</p>
+                                <p>制作期間 : <br class="br_sp">デザイン 1日間 / <br class="br_sp">コーディング 1日間</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <P>『概要』</P>
+                            <P> 自身のポートフォリオ用サイト</P>
+                        </li>
+                        <li>
+                            <P>『ターゲット層』</P>
+                                <P>20~40代男女</P>
+                        </li>
+                        <li>
+                            <P>『サイトの目的』</P>
+                            <P>企自身の人柄とスキルを知ってもらい就職に繋げる。</P>
+                        </li>
+                        <li>
+                            <P>『企業の特徴』<br></P>
+                            <P>丁寧に誠実に、コミュニケーションを大切にモノづくりを行う様に心掛けています。</P>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <P>『デザインコンセプト』</P>
+                            <P>誠実さと人肌が感じられ、親しみやすさのある雰囲気</P>
+                        </li>
+                        <li>
+                            <P>『デザインモチーフ』</P>
+                            <P>色 : 落ち着いた色合い(白・肌色・黄色)</P>
+                            <P>フォント : Noto Sans JP</P>
+                            <P>モチーフ : 長方形、丸み</P>
+                            <P>イメージ : シンプル、朗らか</P>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <p>&copy; 2023 IZUMI KITAMURA </p>
+    </footer>
+
+</body>
+
+</html>

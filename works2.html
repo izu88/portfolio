@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZUMI KITAMURA Works -M&M-</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="IZUMI KITAMURA portfolio"></a></h1>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="nav_sp">
+            <!-- 表示・非表示 -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- アイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <h1>IZUMI KITAMURA</h1>
+                <ul class="nav_list">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                    <li><a href="mailto:izumikitamura.88@gmail.com">
+                        Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Javascriptハンバーガー閉じる -->
+            <script>
+                // ハンバーガーメニューを開閉する<input id="nav-input" type="checkbox" class="nav-unshown">を取得（ここがcheckedになるとハンバーガーメニューが開く）
+                const navInput = document.getElementById('drawer_input')
+
+                // ハンバーガーメニューの中、リンクタグを全部取得
+                const hamburger = document.querySelectorAll('.nav_list li a')
+
+                // 返り値は Array ではなく NodeListなので、配列にする（多分しなくてもいいforEach() メソッドを使うので）
+                const hamburgerA = Array.from(hamburger)
+
+                // forEachで回す
+                hamburgerA.forEach(function (element) {
+                    // ハンバーガーメニュー内のリンクタグをクリックしたら
+                    element.addEventListener('click', function () {
+                        // ハンバーガーメニューのcheckedを外す
+                        navInput.checked = false
+                    })
+                })
+            </script>
+            <!-- javascript終わり -->
+        </div>
+
+        <!-- ハンバーガー終わり -->
+
+        <nav class="nav_pc">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                <li><a href="mailto:izumikitamura.88@gmail.com">
+                    Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- works -->
+        <section id="worksP1" class="wrapperPW">
+            <h2 class="sec-title">Works</h2>
+            <div class="content">
+                <img src="img/worksP2.jpg" class="img_pc" alt="M&M画像">
+                <img src="img/worksP2_SP.jpg" class="img_sp" alt="M&Mスマホ画像">
+            </div>
+
+            <!-- article -->
+            <div id="article">
+                <div class="works-logo">
+                    <ul>
+                        <li>
+                            <a href="https://wp-mandm.sakura.ne.jp/home/" target="_blank" rel="noopener">
+                                <img src="img/worksP2_logo.jpg" id="works_logo1" alt="M&Mロゴ">
+                                <p>WEB site</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="article_text">
+                    <ul>
+                        <li>
+                            <h4 class="content-sub">2.架空美容院の予約機能付きサイト</h3><br>
+                                <p>使用ツール : <br class="br_sp">Figma / WordPress</p>
+                                <p>使用WPテーマ : <br class="br_sp">OnePress</p>
+                                <p>使用言語 : <br class="br_sp">HTML</p>
+                                <p>制作期間 : <br class="br_sp">デザイン 1日間 / <br class="br_sp">コーディング 1日間</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <P>『概要』</P>
+                            <P> 架空の美容院、M&Mの新規Webサイト作成</P>
+                        </li>
+                        <li>
+                            <P>『ターゲット層』</P>
+                                <P>20~30代男女</P>
+                        </li>
+                        <li>
+                            <P>『サイトの目的』</P>
+                            <P>企業イメージのアピール、予約獲得がゴール</P>
+                        </li>
+                        <li>
+                            <P>『企業の特徴』<br></P>
+                            <P>「わくわくする毎日、ひとりひとりに寄り添ったスタイル」をコンセプトに掲げている。</P>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <P>『デザインコンセプト』</P>
+                            <P>遊び心、元気が出る雰囲気</P>
+                        </li>
+                        <li>
+                            <P>『デザインモチーフ』</P>
+                            <P>色 : 元気が出る色合い(黄・オレンジ・緑)</P>
+                            <P>フォント : Open Sans</P>
+                            <P>モチーフ : 丸み、四角形</P>
+                            <P>イメージ : シンプル、楽しそう</P>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <p>&copy; 2023 IZUMI KITAMURA </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZUMI KITAMURA Portfolio</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header">
+        <h1 class="site-title"><a href="index.html"><img src="img/logo.png" alt="IZUMI KITAMURA portfolio"></a></h1>
+
+        <!-- ハンバーガーメニュー -->
+        <div class="nav_sp">
+            <!-- 表示・非表示 -->
+            <input id="drawer_input" class="drawer_hidden" type="checkbox">
+            <!-- アイコン -->
+            <label for="drawer_input" class="drawer_open"><span></span></label>
+            <!-- メニュー -->
+            <nav class="nav_content">
+                <h1>IZUMI KITAMURA</h1>
+                <ul class="nav_list">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                    <li><a href="mailto:izumikitamura.88@gmail.com">
+                        Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Javascriptハンバーガー閉じる -->
+            <script>
+                // ハンバーガーメニューを開閉する<input id="nav-input" type="checkbox" class="nav-unshown">を取得（ここがcheckedになるとハンバーガーメニューが開く）
+                const navInput = document.getElementById('drawer_input')
+
+                // ハンバーガーメニューの中、リンクタグを全部取得
+                const hamburger = document.querySelectorAll('.nav_list li a')
+
+                // 返り値は Array ではなく NodeListなので、配列にする（多分しなくてもいいforEach() メソッドを使うので）
+                const hamburgerA = Array.from(hamburger)
+
+                // forEachで回す
+                hamburgerA.forEach(function (element) {
+                    // ハンバーガーメニュー内のリンクタグをクリックしたら
+                    element.addEventListener('click', function () {
+                        // ハンバーガーメニューのcheckedを外す
+                        navInput.checked = false
+                    })
+                })
+            </script>
+            <!-- javascript終わり -->
+        </div>
+
+        <!-- ハンバーガー終わり -->
+
+        <nav class="nav_pc">
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#works">Works</a></li>
+                <li><a href="https://qiita.com/Kei88" target="_blank" rel="noopener">Study</a></li>
+                <li><a href="mailto:izumikitamura.88@gmail.com">
+                    Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- main -->
+        <div id="mainvisual">
+            <img src="img/mainvisual.jpg" alt="mainvisual">
+        </div>
+
+        <!-- about -->
+        <section id="about" class="wrapper">
+            <h2 class="sec-title">About</h2>
+            <div class="content">
+
+                <h4 class="content-sub">北村泉</h4>
+                <p>
+                    1992年生まれ。奈良県出身、神奈川県在住。<br>
+                    演奏業、音楽講師業に従事後、ジャケットデザインや公式ウェブサイト制作、<br class="br_pc">SNS運営の経験からWeb業務にやり甲斐を見出し、<br class="br_pc">
+                    2023年10月より本格的にWebデザインやコーディングについて<br class="br_pc">独学で学習を開始する。<br>
+                    趣味は、カメラ、読書、旅行、音楽鑑賞。
+                </p><br>
+
+                <h3 class="content-title">「できること」</h3>
+
+                <h4 class="content-sub">・コーディング</h4>
+                <p>
+                    HTML、CSS、Javascriptの基本をudemy講座で学び、<br class="br_pc">
+                    VIsual Studio Codeを使用してWebサイトの制作を行いました。<br>
+                </p>
+
+                <h4 class="content-sub">・デザイン</h4>
+                <p>
+                    Figma、Photoshopをudemy講座で学び、<br class="br_pc">
+                    レスポンシブデザインのデザインカンプ制作を行いました。<br>
+                    定めた課題に対して、「なぜこの配色・フォント・配置なのか」を<br class="br_pc">
+                    筋道を立ててデザインする事を意識しております。<br>
+                    また、対象と同じ業界をリサーチし、どうすればユーザーの目線をゴールに持っていけるかを重視しインプットを進めております。
+                </p>
+            </div>
+
+        </section>
+
+        <!-- works -->
+        <section id="works" class="wrapper">
+            <h2 class="sec-title">Works</h2>
+            <div class="content">
+                <a href="works1.html">
+                    <img src="img/works1_img.jpg" class="img_pc" alt="works1">
+                    <img src="img/works1_SP.jpg" class="img_sp" alt="works1">
+                </a>
+                <a href="works2.html">
+                    <img src="img/works2_img.jpg" class="img_pc" alt="works2">
+                    <img src="img/works2_SP.jpg" class="img_sp" alt="works2">
+                </a>
+                <a href="works3.html">
+                    <img src="img/works3_img.jpg" class="img_pc" alt="works3">
+                    <img src="img/works3_SP.jpg" class="img_sp" alt="works3">
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        <p>&copy; 2023 IZUMI KITAMURA </p>
+    </footer>
+
+</body>
+
+</html>
